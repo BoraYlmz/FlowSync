@@ -1,0 +1,236 @@
+.company-Detail{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 600px;
+  background-color: var(--panel-bg);
+  border-left: 1px solid var(--item-border);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+}
+
+.company-Detail.open {
+  transform: translateX(0);
+}
+
+.company-Detail.close {
+  transform: translateX(100%);
+}
+
+.company-Detail .close_btn {
+  background: transparent;
+  color: var(--text-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.1rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding-top: 3px;
+  cursor: pointer;
+}
+
+.company-Detail .close_btn:hover{
+    background-color: var(--surface);
+}
+
+.company-Detail .content-placeholder{
+  padding: 20px;
+  margin: 0;
+}
+
+.company-Detail .content-placeholder h2{
+  position: relative;
+  top:-20px;
+  left:-20px
+}
+.company-Detail .company-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.company-Detail .company-info p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin:0;
+}
+
+.company-Detail .content-placeholder .removeCardBtn{
+  width: auto;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--error);
+  color: white;
+  border: 0;
+  border-radius: 7px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 20px;
+  margin-right: 20px ;
+  cursor: pointer;
+}
+.company-Detail .content-placeholder .removeCardBtn:hover{
+  filter: brightness(85%);
+}
+body.dark .company-Detail .input-group input{ color:var(--text-contrast)} 
+
+.company-Detail ul{
+  list-style: "";
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  padding: 0;
+  position: relative;
+}
+
+.company-Detail ul li{
+  cursor: pointer;
+  margin-bottom: 5px;
+  width: 200px;
+  text-align: center;
+}
+.company-Detail ul li:hover{
+
+  color: var(--primary);
+}
+
+.company-Detail ul li.active{
+    color: var(--secondary);
+}
+
+.company-Detail ul .underline{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--secondary);
+  transition: 0.3s ease;
+}
+
+.company-Detail ul li.active.u_0 ~ .underline{
+  width: 33%;
+  left: 0;
+}
+.company-Detail ul li.active.u_1 ~ .underline{
+  width: 33%;
+  left: 33%;
+}
+.company-Detail ul li.active.u_2 ~ .underline{
+  width: 33%;
+  left: 66%;
+}
+
+/* 
+.departments-Detail .addUserContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.departments-Detail .addUserContainer .addingUser {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--success, #28a745);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+.departments-Detail .addUserContainer .slideInInput,
+.departments-Detail .addUserContainer .slideOutInput {
+  position: absolute;
+  right: 60px; 
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.5s ease;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.departments-Detail .addUserContainer .slideInInput {
+  animation-name: inputSlideInLeft;
+}
+
+.departments-Detail .addUserContainer .slideOutInput {
+  animation-name: inputSlideOutLeft;
+}
+
+@keyframes inputSlideInLeft {
+  from {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes inputSlideOutLeft {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+}
+
+.departments-Detail .addUserContainer .userSearchBox {
+  position: absolute;
+  max-height: 480px;
+  top: 60px;
+  right: 10px;
+  background: var(--surface);
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 8px;
+  width: 260px;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.25s ease;
+  padding-right: 4px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-border) transparent;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+*/

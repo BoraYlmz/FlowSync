@@ -1,0 +1,242 @@
+.departments-Detail{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 600px;
+  background-color: var(--panel-bg);
+  border-left: 1px solid var(--item-border);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+}
+
+.departments-Detail.open {
+  transform: translateX(0);
+}
+
+.departments-Detail.close {
+  transform: translateX(100%);
+}
+
+.departments-Detail .close_btn {
+  background: var(--secondary);
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-bottom-left-radius: 50%;
+  font-size: 1.2em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.departments-Detail .close_btn:hover{
+  filter: brightness(85%);
+}
+
+.departments-Detail .content-placeholder{
+  padding: 20px;
+  margin: 0;
+}
+.departments-Detail .addUserContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.departments-Detail .addUserContainer .addingUser {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--success, #28a745);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+.departments-Detail .addUserContainer .slideInInput,
+.departments-Detail .addUserContainer .slideOutInput {
+  position: absolute;
+  right: 60px; /* Butonun solundan başlar */
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.5s ease;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.departments-Detail .addUserContainer .slideInInput {
+  animation-name: inputSlideInLeft;
+}
+
+.departments-Detail .addUserContainer .slideOutInput {
+  animation-name: inputSlideOutLeft;
+}
+
+@keyframes inputSlideInLeft {
+  from {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes inputSlideOutLeft {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+}
+
+.departments-Detail .addUserContainer .userSearchBox {
+  position: absolute;
+  max-height: 480px;
+  top: 60px;
+  right: 10px;
+  background: var(--surface);
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 8px;
+  width: 260px;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.25s ease;
+  padding-right: 4px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-border) transparent;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.departments-Detail .content-placeholder .removeCardBtn{
+  width: auto;
+  padding: 7px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--error);
+  color: white;
+  border: 0;
+  border-radius: 7px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 20px;
+  margin-right: 20px ;
+  cursor: pointer;
+}
+.departments-Detail .newForm{
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.departments-Detail .newForm .input-group {
+  position: relative;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.departments-Detail .newForm .input-group input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--primary-border);
+  border-top: 0 solid transparent;
+  border-left: 0 solid transparent;
+  border-right: 0 solid transparent;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: var(--input-bg);
+  padding: 25px 5px 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  color: var(--text-color);
+}
+
+.departments-Detail .newForm button {
+  margin-left: auto;
+  width: 120px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  background-color: var(--success);
+  color: var(--text-color);
+}
+
+.departments-Detail .newForm button:hover {
+  filter: brightness(85%);
+}
+
+.departments-Detail .newForm .input-group label {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  font-size: 16px;
+  color: var(--text-secondary);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  padding: 0 4px;
+}
+
+.departments-Detail .newForm .input-group input:focus + label,
+.departments-Detail .newForm .input-group input:not(:placeholder-shown) + label {
+  top: 5px;
+  left: 1px;
+  font-size: 12px;
+  color: var(--primary);
+}
+
+.departments-Detail .newForm .input-group .underline {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 2px;
+  width: 0;
+  background: var(--primary);
+  transition: 0.3s ease;
+}
+
+.departments-Detail .newForm .input-group input:focus ~ .underline {
+  width: 100%;
+  left: 0;
+}
+
+body.dark .departments-Detail .newForm .input-group input{ color:var(--text-contrast)}
+body.dark .departments-Detail .input-group input{ color:var(--text-contrast)}

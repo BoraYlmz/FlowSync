@@ -1,0 +1,86 @@
+.departments-Card{
+  width: 370px;
+  min-width: 370px;
+  height: 220px;
+  padding: 16px;
+  border: 1px solid var(--surface);
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  background: var(--surface);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.departments-Card h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.3rem;
+  color: var(--text-color);
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.departments-Card .manager-info {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.departments-Card .button-group {
+  display: flex;
+  flex-direction: row;
+  position: relative; 
+  margin-top: auto;
+}
+
+.departments-Card .button-group button {
+  padding: 8px 16px;
+  display: flex;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.departments-Card .detail_btn {
+  background-color: var(--primary);
+  color: var(--text-color);
+}
+
+.departments-Card .assign_btn {
+  background-color: var(--success);
+  color: var(--text-color);
+  margin-left: auto;
+}
+
+.departments-Card .button-group button:hover {
+  filter: brightness(85%);
+}
+
+.departments-Card .addUserContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.departments-Card .addUserContainer .userSearchBox {
+  position: absolute;
+  max-height: 480px;
+  top: 60px;
+  right: 10px;
+  background: var(--surface);
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 8px;
+  width: 260px;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.25s ease;
+  padding-right: 4px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-border) transparent;
+}

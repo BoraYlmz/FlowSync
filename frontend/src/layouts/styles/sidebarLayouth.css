@@ -1,0 +1,95 @@
+.sidebar.container {
+  width: 300px;
+  background-color: var(--surface);
+  height: 100vh;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  flex-direction: column;
+  display: flex;
+}
+.sidebar.logo {
+  font-size: 32px;
+  font-weight: 600;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: -7px 20px 20px 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar.logo.content {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background-color: var(--surface);
+}
+
+.sidebar.logo.content img {
+  background-color: #ffffff; /*sabit remkler logo arkaplanda kaybolmaması için */
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  padding: 2px;
+  height: 50px;
+  width: auto;
+}
+.sidebar hr {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: -20px;
+  border: 1px solid var(--text-secondary);
+  color: var(--text-secondary);
+}
+
+.sidebar button {
+   background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: var(--text-color);
+  text-align: center;
+  margin-top: auto;
+}
+
+.sidebar button:hover {
+  background-color: var(--bg-color);
+}
+
+.sidebar.links {
+  margin-top: 15px;
+  font-size: 15px;
+  color: var(--logo-text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar.links.active {
+  color: var(--secondary);
+}
+
+.sidebar ul {
+  list-style: "";
+  padding: 0;
+  margin: 0;
+}
+.sidebar ul li {
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.sidebar ul li:hover {
+  color: var(--primary);
+}
+
+.sidebar ul li i {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s ease;
+}
+
+.sidebar ul li:hover i {
+  transform: scale(1.1) rotate(5deg);
+}
+

@@ -1,0 +1,83 @@
+.company-Detail .newForm{
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.company-Detail .newForm .input-group {
+  position: relative;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.company-Detail .newForm .input-group input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--primary-border);
+  border-top: 0 solid transparent;
+  border-left: 0 solid transparent;
+  border-right: 0 solid transparent;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: var(--input-bg);
+  padding: 25px 5px 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  color: var(--text-color);
+}
+
+.company-Detail .newForm button {
+  margin-left: auto;
+  width: 120px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  background-color: var(--success);
+  color: var(--text-color);
+}
+
+.company-Detail .newForm button:hover {
+  filter: brightness(85%);
+}
+
+.company-Detail .newForm .input-group label {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  font-size: 16px;
+  color: var(--text-secondary);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  padding: 0 4px;
+}
+
+.company-Detail .newForm .input-group input:focus + label,
+.company-Detail .newForm .input-group input:not(:placeholder-shown) + label {
+  top: 5px;
+  left: 1px;
+  font-size: 12px;
+  color: var(--primary);
+}
+
+.company-Detail .newForm .input-group .underline {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 2px;
+  width: 0;
+  background: var(--primary);
+  transition: 0.3s ease;
+}
+
+.company-Detail .newForm .input-group input:focus ~ .underline {
+  width: 100%;
+  left: 0;
+}
+
+body.dark .company-Detail .newForm .input-group input{ color:var(--text-contrast)}

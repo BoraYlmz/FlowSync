@@ -1,0 +1,99 @@
+.company-Card{
+  width: 370px;
+  min-width: 370px;
+  height: 220px;
+  padding: 16px;
+  border: 1px solid var(--surface);
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  background: var(--surface);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.company-Card h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.3rem;
+  color: var(--text-color);
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.company-Card .cardHeader{
+  display: flex;
+  position: relative;
+}
+
+.company-Card .update_btn{
+  color: var(--text-secondary);
+  margin-left: auto;
+  transition: all 0.3s ease !important;
+}
+
+.company-Card .update_btn:hover{
+  color: var(--text-color);
+  scale: 1.1;
+}
+
+.company-Card .cardBody{
+    margin-top: 10px;
+}
+.company-Card .info {
+    
+   font-size: 0.9rem;
+  margin: 2px 0;
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+}
+.company-Card .address {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.company-Card .icon {
+  flex-shrink: 0;
+  width: 18px;
+  text-align: center;
+}
+
+.company-Card .text {
+    flex: 1;
+   display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.company-Card .button-group {
+  display: flex;
+  flex-direction: row;
+  position: relative; 
+  margin-top: auto;
+}
+
+.company-Card .button-group button {
+  padding: 8px 16px;
+  display: flex;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.company-Card .detail_btn {
+  background-color: var(--primary);
+  color: var(--text-color);
+  margin-left: auto;
+}
+
+.company-Card .button-group button:hover {
+  filter: brightness(85%);
+}

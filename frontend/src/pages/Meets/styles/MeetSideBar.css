@@ -1,0 +1,149 @@
+.MeetSideBar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 600px;
+  background-color: var(--panel-bg);
+  border-left: 1px solid var(--item-border);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+  overflow-y: auto;  
+  overflow-x: hidden;
+}
+
+.MeetSideBar.open {
+  transform: translateX(0);
+}
+
+.MeetSideBar.close {
+  transform: translateX(100%);
+}
+
+.MeetSideBar .close_btn {
+  background: transparent;
+  color: var(--text-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.1rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding-top: 3px;
+  cursor: pointer;
+}
+
+.MeetSideBar .close_btn:hover{
+  filter: brightness(85%);
+}
+
+.MeetSideBar .content-placeholder{
+  padding: 20px;
+  margin: 0;
+}
+
+.MeetSideBar .content-placeholder .removeCardBtn{
+  width: auto;
+  padding: 7px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--error);
+  color: white;
+  border: 0;
+  border-radius: 7px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 20px;
+  margin-right: 20px ;
+  cursor: pointer;
+}
+.MeetSideBar .newForm{
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.MeetSideBar .newForm .input-group {
+  position: relative;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.MeetSideBar .newForm .input-group input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--primary-border);
+  border-top: 0 solid transparent;
+  border-left: 0 solid transparent;
+  border-right: 0 solid transparent;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: var(--input-bg);
+  padding: 25px 5px 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  color: var(--text-color);
+}
+
+.MeetSideBar .newForm button {
+  margin-left: auto;
+  width: 120px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  background-color: var(--success);
+  color: var(--text-color);
+}
+
+.MeetSideBar .newForm button:hover {
+  filter: brightness(85%);
+}
+
+.MeetSideBar .newForm .input-group label {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  font-size: 16px;
+  color: var(--text-secondary);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  padding: 0 4px;
+}
+
+.MeetSideBar .newForm .input-group input:focus + label,
+.MeetSideBar .newForm .input-group input:not(:placeholder-shown) + label {
+  top: 5px;
+  left: 1px;
+  font-size: 12px;
+  color: var(--primary);
+}
+
+.MeetSideBar .newForm .input-group .underline {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 2px;
+  width: 0;
+  background: var(--primary);
+  transition: 0.3s ease;
+}
+
+.MeetSideBar .newForm .input-group input:focus ~ .underline {
+  width: 100%;
+  left: 0;
+}
+
+body.dark .MeetSideBar .newForm .input-group input{ color:var(--text-contrast)}
+body.dark .MeetSideBar .input-group input{ color:var(--text-contrast)}
